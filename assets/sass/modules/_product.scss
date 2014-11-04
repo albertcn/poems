@@ -1,0 +1,129 @@
+// ############# Product #############
+
+/* ============== Product ============== */
+@font-face {
+  font-family: 'Brandon-Bold';
+  src: url('../fonts/brandon/Brandon-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../fonts/brandon/Brandon-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Brandon-Light';
+  src: url('../fonts/brandon/Brandon-light.woff') format('woff');
+}
+
+.product-tile {
+	display: inline-block;
+	margin-bottom: 15px;
+	width: 240px;
+	background-color: $white;
+	border: 1px solid #eee;
+	border-radius: 10px;
+	@include box-shadow();
+
+	@include media(phone) {
+		width: 135px;
+	}
+
+	.btn-favorite {
+		position: absolute;
+		right: $sm;
+		bottom: 0;
+	}
+
+	.product-image {
+
+		border-bottom: 1px solid #eee;
+
+		img {
+			@include border-top-radius(10px);
+		}
+	}
+
+	.product-detail-wrapper {
+		padding: 15px;
+		@include border-bottom-radius(10px);
+		font-family: "Brandon", "Lato";
+
+		.product-owner {
+			color: #979797;
+			margin-bottom: 8px;
+		}
+
+		.product-name-wrapper {
+			text-transform: lowercase;
+		}
+
+		.product-name {
+			font-family: "Brandon-Bold", "Lato";
+			font-size: 20px;
+			text-transform: capitalize;
+			margin-bottom: 5px;
+			color: $text-color;
+
+			@include media(phone) {
+				font-size: 18px;
+			}
+		}
+
+		.product-sku {
+			font-size: 12px;
+			margin-bottom: 8px;
+			color: #979797;
+		}
+
+		.product-price {
+			font-family: "Brandon-Light", "Lato";
+			font-size: 24px;
+			font-weight: $lighter;
+			margin-bottom: 8px;
+			color: $green;
+
+			@include media(phone) {
+				font-size: 16px;
+			}
+		}
+
+		.product-description {
+			padding: 10px;
+			text-align: left;
+			color: $gray;
+			font-weight: $light;
+		}
+	}
+
+	.product-actions {
+		.product-actions-left,
+		.product-actions-right {
+			display: inline-block;
+			width: 50%;
+			padding-top: 10px;
+			padding-bottom: 15px;
+			border: 1px solid #eee;
+			font-weight: 300;
+			background-color: $cyan-bg;
+			color: $green;
+
+			&:hover {
+				background-color: darken($cyan-bg, 5%);
+				cursor: pointer;
+			}
+
+			i {
+				margin-right: 5px;
+			}
+		}
+
+		.product-actions-left {
+			border-bottom-left-radius: 6px;
+		}
+
+		.product-actions-right {
+			border-bottom-right-radius: 6px;
+		}
+	}
+}

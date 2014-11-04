@@ -1,0 +1,56 @@
+// ############# Typography #############
+
+// font family
+$lato:                  "Lato", Helvetica, Arial, sans-serif;
+$quicksand:             "Quicksand", Helvetica, Arial, sans-serif;
+
+// base font
+$font-family-base:      $lato !default;
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-button:    $quicksand !default;
+
+// font size
+$font-size-base:          14px !default;
+$font-size-large:         18px !default;
+$font-size-small:         12px !default;
+$font-size-tiny:          10px !default;
+
+$small:                   $font-size-small;
+$large:                   $font-size-large;
+$xlarge:                  48px;
+
+$font-size-h1:            36px !default;
+$font-size-h2:            30px !default;
+$font-size-h3:            24px !default;
+$font-size-h4:            18px !default; 
+$font-size-h5:            14px !default;
+$font-size-h6:            12px !default;
+
+$h1:                      $font-size-h1;
+$h2:                      $font-size-h2;
+$h3:                      $font-size-h3;
+$h4:                      $font-size-h4;
+$h5:                      $font-size-h5;
+$h6:                      $font-size-h6;
+
+$light:                   300;
+$lighter:                 100;
+$normal:                  400;
+$bold:                    700;
+
+// line height
+$line-height-base:        1.428571429 !default;
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$line-height-small:         1.33 !default;
+$line-height-large:         1.5 !default;
+
+// headings
+$headings-font-family:    inherit !default;
+$headings-font-weight:    700 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+$headings-small-color:    $gray-light !default;
+
+// hr
+$hr-border:               $gray-lighter !default;

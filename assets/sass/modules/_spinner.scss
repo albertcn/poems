@@ -1,0 +1,45 @@
+// ############# spinner ############
+
+/* ============== spinner ============== */
+
+
+#page-loader.fade.in {
+    display: block;
+}
+
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $gray-lighter;
+
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -20px -20px 0 0;
+    }
+}
+/*
+.fade.in .spinner {
+    //@include animation(spin .6s infinite linear);
+}*/
+
+.spinner {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    
+    border: 2px solid #fff;
+    border-top: 2px solid $cyan;
+    border-radius: 100%;
+
+    @include animation(spin .6s infinite linear);
+}
+
+@include keyframes(spin) {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

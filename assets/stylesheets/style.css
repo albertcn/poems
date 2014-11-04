@@ -1,0 +1,152 @@
+body {
+    background-color: #f5f5f5;
+}
+
+
+.content{
+    max-width: 720px;
+    padding: 0 2px 20px 2px;
+    margin: 0 auto;
+}
+
+
+.page{
+    margin:40px 0 10px 0;
+    padding: 20px;
+    border: 1px solid beige;
+    background-color: #ffffff;
+    -moz-box-shadow:    0 0 2px gainsboro;
+   -webkit-box-shadow: 0 0 2px gainsboro;
+   box-shadow:         0 0 2px gainsboro;
+}
+
+.line {
+    border-top: dotted 1px #dadada;
+    margin: 20px 0;
+}
+
+.author{
+    margin-top: 1em;
+    overflow: hidden;
+    padding-top: 0.8em;
+}
+
+.author ul{
+    float: left;
+    list-style: none;
+    vertical-align: baseline;
+    padding: 3px 0;
+}
+.author li{
+    margin: 3px 5px;
+    float: left;
+    content: 'd';
+}
+
+.author li:nth-child(2n):before, .author li:nth-child(3n):before{
+    content: "•";
+    padding: 0 10px 0 0;
+}
+
+.paragraph {
+    padding: 15px 5px 0 5px;
+}
+
+.footer{
+  margin-bottom: 30px;
+  padding: 0 21px;
+}
+.right{
+  float: right;
+  display: inline-block;
+}
+.bold{
+  font-weight: bold;
+  color: red;
+}
+.bold a, a.bold{
+  color: red;
+  text-decoration: underline;
+}
+.bold-super{
+  color: white;
+  background-color: red;
+  border: solid 1px red;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.bold-super a{
+  color: white;
+}
+
+.center{
+  text-align: center;
+}
+.structure-wrapper{
+  margin:10px 139px 0 139px;
+}
+.first-frame{
+  margin: 0 120px;
+  border:solid 1px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #FFFF00;
+  border-radius: 5px;
+}
+.first-arrow{
+  text-align: center;
+}
+.last-arrow{
+  border-left: solid 2px;
+  margin:0 auto;
+  width: 2px;
+  height: 30px;
+}
+.last-big-arrow{
+  margin:0 auto;
+  width: 300px;
+  height: 30px;
+  border-top: solid 2px;
+  border-left: solid 2px;
+  border-right: solid 2px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.last-inner-arrow{
+  border-left: solid 2px;
+  margin:0 auto;
+  width: 2px;
+  height: 28px;
+}
+.last-left-frame{
+  border:solid 1px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #FFFF00;
+  border-radius: 5px;
+  width: 100px;
+  display: inline-block;
+  height: 42px;
+}
+.last-center-frame{
+  margin: 0 44px;
+  border:solid 1px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #FFFF00;
+  border-radius: 5px;
+  width: 100px;
+  display: inline-block;
+  height: 42px;
+}
+.last-right-frame{
+  border:solid 1px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #FFFF00;
+  border-radius: 5px;
+  width: 100px;
+  display: inline-block;
+  height: 42px;
+}

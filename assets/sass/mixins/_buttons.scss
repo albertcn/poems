@@ -1,0 +1,86 @@
+// ############# buttons #############
+
+
+// buttons with outline like in radio input.
+@mixin btn-outline( $border-color: $primary-color ) {
+    color: $border-color;
+    background-color: $white;
+    border: 1px solid $border-color;
+    &:hover,
+    &:active,
+    &:focus,
+    &.active,
+    &:active:focus,
+    &.active:focus {
+        color: $white;
+        background-color: $border-color;
+        border: 1px solid $border-color;
+    }
+}
+
+// buttons with gradient skin.
+@mixin btn-grad( $bg-color: $primary-color ) {
+  @include text-shadow();
+  @include box-shadow();
+  border-bottom: rgba(0, 0, 0, .4) 1px solid;
+  @include gradient-vertical(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1), 0%, 100% );
+  color: $white;
+  border-color: darken($bg-color, 20%);
+  background-color: $bg-color;
+  &:hover,
+  &:focus,
+  &:active {
+      color: #fff;
+      background-color: darken($bg-color, 10%);
+  }
+}
+
+
+// e.g. .btn .btn-primary
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @include text-shadow();
+  @include box-shadow();
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}

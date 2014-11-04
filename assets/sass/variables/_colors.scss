@@ -1,0 +1,73 @@
+// ############# colors #############
+
+// basic colors
+$white:                  #fff;
+
+// brand colors
+$yellow:                 #ffc669;
+$blue:                 	 #4d9cd9;
+$dark-red:               #EF5844;
+$cyan:                   #58b7ad;
+$green:                  #417505;
+
+$gold-bg:                #DCD8CD;
+$lighter-blue:			 #EAF0F4;
+$light-blue:			 #C1CEE8;
+$dark-blue:				 #364051;
+
+// gray colors
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 46.7%) !default; // #777
+$gray-lighter-1:         lighten(#000, 68.9%) !default;
+$gray-lighter-2:         lighten(#000, 84.1%) !default;
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+$gray-border:            #dedede;
+$gray-bg:                $gray-lighter;
+$gray-text:              #bbbbbb;
+
+// cyan colors
+$cyan-light:             #80c8c0;
+$cyan-light-1:           #8FDBD4;
+$cyan-lighter:           #e4f8f6;
+$cyan-bg:                #EFF8F6;
+
+$primary-color:          $cyan;
+$primary-bg:             $cyan-bg;
+
+$success-color:          #2ecc71;
+$success-bg:             #dff0d8;
+
+$warning-color:          #f1c40f;
+$warning-bg:             #fcf8e3;
+
+$error-color:            #e74c3c;
+$error-bg:               #f2dede;
+
+$dark-bg:                #6C778B;
+$dark-bg-hover:          #7488AB;
+
+// scaffolding colors
+$body-bg:               #fff !default;
+
+// text-color
+$taupe:                 #4B4338;
+$text-color:            $taupe !default;
+
+// link-color
+$turquoise:              #1abc9c;
+$green-sea:              #16a085;
+
+$link-color:            $green-sea !default;
+$link-hover-color:      $turquoise !default;
+
+$hr-border:             $gray-border !default;
+
+// social media colors 
+$facebook-color:              #3b5998;
+$twitter-color:               #00aced;
+$pinterest-color:             #cb2027;
+$instagram-color:             #517fa4;
+$tumblr-color:                #34465D;

@@ -1,0 +1,26 @@
+// ############# calendar #############
+
+.rounded-calendar {
+	display: inline-block;
+	border: 1px solid $dark-red;
+	width: 60px;
+	height: 60px;
+	border-radius: 6px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: white;
+
+	.calendar-month {
+		height: 30%;
+		background-color: $dark-red;
+		color: $white;
+		font-size: 11px;
+		@include text-shadow();
+	}
+
+	.calendar-day {
+		color: $dark-red;
+		font-size: 30px;
+		font-weight: bold;
+	}
+}

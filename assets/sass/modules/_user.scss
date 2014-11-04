@@ -1,0 +1,50 @@
+// ############# user #############
+
+/* ============== User ============== */
+
+.rounded-logo {
+	min-width: 100%;
+	padding-top: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	border: 1px solid #eee;
+
+	&:hover {
+		border-color: #9ecaed;
+		box-shadow: 0 0 10px #9ecaed;
+		cursor: pointer;
+	}
+}
+
+.small-info-card {
+	padding: 10px;
+
+	.user-logo {
+		width: 60px;
+		display: inline-block;
+	}
+
+	.user-info {
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 18px;
+		padding-top: 15px;
+		
+		.user-name {
+			font-size: 18px;
+			font-weight: bold;
+			font-style: italic;
+			margin-bottom: 10px;
+
+			a {
+				color: $text-color;
+			}
+		}
+
+		.user-geo {
+			font-style: italic;
+		}
+	}
+}

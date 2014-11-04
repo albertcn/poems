@@ -1,0 +1,341 @@
+// ############# form and input ############
+
+/* ============== Form and input ============== */
+
+// input wrapper
+/*.input-wrapper, label {
+    margin: $v 0;
+}*/
+
+// input element
+
+/*input[type="text"]{
+  height: 38px;
+}*/
+/*
+input[type="checkbox"] {
+  margin-right: $h;
+}*/
+
+textarea {
+  max-width: 100%;
+}
+
+// file input buttons
+
+.fileUpload {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0;
+}
+
+// input error messages
+.input-has-error {
+  color: $error-color;
+  border-color: $error-color;
+}
+
+.input-has-success {
+  color: $success-color;
+  border-color: $success-color;
+}
+
+.input-success-message:not(:empty) {
+  color: $success-color;
+  margin: $v 0;
+  font-size: 90%;
+  padding: 8px;
+  border: 1px solid $success-color;
+  border-radius: $border-radius-base;
+  background-color: $success-bg;
+
+  &:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    margin-right: $h-xs;
+  }
+}
+
+.input-error-message:not(:empty) {
+  color: $error-color;
+  margin: $v 0;
+  font-size: 90%;
+  padding: 8px;
+  border: 1px solid $error-color;
+  border-radius: $border-radius-base;
+  background-color: $error-bg;
+
+  &:before {
+    font-family: FontAwesome;
+    content: "\f00d";
+    margin-right: $h-xs;
+  }
+}
+
+
+
+/* Simple Bootstrap overrides for horizontal forms. Mostly used in Connect modal.*/
+/*.form-horizontal {
+  padding: $v $h;
+
+  .checkbox label {
+    margin: 0;
+  }
+
+  .control-label {
+    text-align: left;
+  }
+
+  fieldset {
+    .form-group {
+      margin-bottom: $v-sm;
+    }
+
+    legend {
+      padding: $v $h;
+      
+      margin-bottom: $v-lg;
+      margin-top: 0;
+      //margin: 0 -$h $v-lg -$h;
+
+      background-color: $gray-lighter;
+      font-size: $font-size-h4;
+      font-weight: bold;
+      border-radius: $border-radius-base;
+    }
+  }
+}*/
+
+
+
+// panel for checkboxes.
+.panel-checkbox {
+  width: 100%;
+  margin: $v-sm;
+  border-color: $cyan;
+
+  > .panel-heading {
+    padding: $v-sm $h;
+    color: $white;
+    background-color: $cyan-light-1;
+    border-color: $cyan;
+
+    .panel-title {
+      text-align: center;
+      @include text-shadow();
+
+      a:hover {
+        color: $gray-lighter;
+      }
+    }
+  }
+}
+
+.button-checkbox {
+  .btn {
+    margin: $v-sm;
+  }
+}
+
+
+//=============================================================================
+// Custom range slider styling
+// NOTE: combining these selectors will cause stuff to break, don't ask me why.
+
+// Slider track.
+input[type='range'] {
+  outline: none;
+  -webkit-appearance: none;
+
+  height: 10px;
+  margin: 12px 0;
+
+  border: 1px solid #ccc;
+  border-radius: $border-radius-base;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+
+  vertical-align: middle;
+
+  &::-moz-range-track {
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+  }
+
+  &::-ms-track {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+// Thumb
+input[type="range"] {
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    height: 20px;
+    width: 20px;
+
+    border-radius: $border-radius-base;
+    @include button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+  }
+
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    background: none;
+
+    height: 20px;
+    width: 20px;
+
+    border-radius: $border-radius-base;
+    @include button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+  }
+
+  &::-ms-thumb {
+    background: none;
+
+    height: 20px;
+    width: 20px;
+
+    border-radius: $border-radius-base;
+    @include button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+  }
+
+}
+
+.big-input {
+  height: 64px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 100;
+  font-style: italic;
+  padding-left: 25px;
+}
+
+//=============================================================================
+
+
+//=============================================================================
+// Custom checkbox styling.
+/* Checkboxes should be formatted like this.
+  <div class="checkbox">
+     <input type="checkbox"/>
+     <label>Label For Checkbox</label>
+  </div>
+*/
+
+.checkbox {
+  padding: 0;
+  margin: 0;
+
+  label {
+    display: inline-block;
+  
+    &:before {
+      display: inline-block;
+      
+      width: $line-height-computed;
+      height: $line-height-computed;
+
+      margin: 0 $h-xs 0 0;
+      padding: 0;
+
+      border: 2px solid $cyan;
+      border-radius: $border-radius-base;
+
+      background-color: transparent;
+      color: $cyan;
+
+      vertical-align: middle;
+      text-align: center;
+      content: "";
+    }
+
+    &:hover:before {
+      color: $gray-lighter;
+      content: "\2713";
+      font-size: 16px;
+      line-height: 16px;
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    color: $gray-darker;
+    content: "\2713";
+    font-size: 16px;
+    line-height: 16px;
+    width: 20px;
+    height: 20px;
+  }
+
+  input[type=checkbox]:disabled + label {
+    cursor: auto;
+  }
+
+  input[type=checkbox]:disabled + label:before {
+    cursor: auto;
+    border-color: $gray-border;
+    background-color: $gray-lighter;
+  }
+
+}
+//=============================================================================
+
+
+
+// Form popover error handling.
+.popover.error-popover {
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    box-shadow: none;
+    color: #B94A48;
+    cursor: pointer;
+    max-width: none;
+    z-index: 1099;
+}
+.popover.error-popover .popover-content {
+    padding: 6px 14px;
+}
+.popover.error-popover.right .arrow {
+    border-right-color: #EED3D7;
+}
+.popover.error-popover.right .arrow:after {
+    border-right-color: #F2DEDE;
+}
+.popover.error-popover.left .arrow {
+    border-left-color: #EED3D7;
+}
+.popover.error-popover.left .arrow:after {
+    border-left-color: #F2DEDE;
+}
+.popover.error-popover.top .arrow {
+    border-top-color: #EED3D7;
+    left: 30px;
+}
+.popover.error-popover.top .arrow:after {
+    border-top-color: #F2DEDE;
+}
+
+.ui-autocomplete-category {
+   font-weight: bold;
+}

@@ -1,0 +1,93 @@
+// ############# scaffolding ############
+
+/* ============== Scaffolding ============== */
+
+// body
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+}
+
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include transition(.25s);
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    @include tab-focus();
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+
+  i {
+    margin-right: $v-sm;
+  }
+}
+
+
+// Horizontal rules
+
+hr {
+  border: 0;
+  border-top: 1px solid $hr-border;
+  
+  &.cyan-dashed {
+    border-top: 1px dashed $cyan;
+  }
+
+  &.cyan-solid {
+    border-top: 1px solid $cyan;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.hr-legend {
+    margin: $v 0;
+    border: none;
+    border-top: 1px solid $gray-border;
+    text-align: center;
+
+    legend {
+        font-size: 1em;
+        padding: 0 $h;
+        margin: 0 auto;
+        color: $gray;
+        width: auto;
+        border-bottom: none;
+    }
+}
+
+
+// clamp the container max-width site-wide This overrides
+// the default bootstrap container, but we think it improves
+// readability on various devices.
+.container {
+  max-width: 920px;
+}
+
+ul, 
+ol { 
+  margin: 0; 
+  padding: 0; 
+
+  li {
+    list-style: none;
+  }
+}

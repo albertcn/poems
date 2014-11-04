@@ -1,0 +1,56 @@
+// ############# Spaces #############
+
+// padding margin spacer 
+$md:    15px;
+
+$sm:    10px;
+$xs:    5px;
+$xxs:   2px;
+
+$lg:    20px;
+$xl:    30px;
+
+$xxl:   40px;
+
+// space ( 3px, 5px, 10px, 20px, 30px, 50px )
+
+$vertical-base:     10px !default;
+$horizontal-base:   15px !default; // 10px + 5px
+
+$vertical-large:    20px !default;
+$horizontal-large:  30px !default; // 20px + 10px
+
+$vertical-small:    5px !default;
+$horizontal-small:  8px !default; // 5px + 3px
+
+$vertical-xl:       30px !default;
+$horizontal-xl:     50px !default; // 30px + 20px
+
+$vertical-xs:       3px !default;
+$horizontal-xs:     5px !default; // 3px + 2px
+
+// short-hands
+
+$v:                 $vertical-base;
+$h:                 $horizontal-base;
+
+$v-lg:              $vertical-large;
+$h-lg:              $horizontal-large;
+
+$v-sm:              $vertical-small;
+$h-sm:              $horizontal-small;
+
+$v-xl:              $vertical-xl;
+$h-xl:              $horizontal-xl;
+
+$v-xs:              $vertical-xs;
+$h-xs:              $horizontal-xs;
+
+// border radius
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+$r:                         $border-radius-base;
+$r-lg:                      $border-radius-large;
+$r-sm:                      $border-radius-small;

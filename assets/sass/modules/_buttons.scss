@@ -1,0 +1,140 @@
+// ############# buttons ############
+
+/* ============== buttons ============== */
+
+// global setting
+.btn {
+  
+  text-transform: uppercase;
+
+  &:focus, 
+  &:active:focus,
+  &.active:focus {
+    outline: none;
+  }
+
+  i {
+    margin-right: $v-sm;
+  }
+}
+
+// btn outline
+
+.btn-outline-cyan {
+    @include btn-outline();
+}
+
+.btn-outline-cyan-light {
+    @include btn-outline($cyan-light);
+}
+
+.btn-outline-blue {
+    @include btn-outline($btn-blue-bg);
+}
+
+.btn-outline-yellow {
+    @include btn-outline($btn-yellow-bg);
+}
+
+.btn-outline-dark-red {
+    @include btn-outline($btn-dark-red-bg);
+}
+
+// btn grad
+
+.btn-grad-cyan {
+    @include btn-grad($btn-cyan-bg);
+}
+
+.btn-grad-blue {
+    @include btn-grad($btn-blue-bg);
+}
+.btn-grad-yellow {
+    @include btn-grad($btn-yellow-bg);
+}
+.btn-grad-dark-red {
+    @include btn-grad($btn-dark-red-bg);
+}
+
+
+// btn colors
+
+.btn-yellow {
+  @include button-variant($btn-yellow-color, $btn-yellow-bg, $btn-yellow-border);
+}
+
+.btn-cyan {
+  @include button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+}
+
+.btn-blue {
+  @include button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+}
+
+.btn-dark-red {
+  @include button-variant($btn-dark-red-color, $btn-dark-red-bg, $btn-dark-red-border);
+}
+
+.btn-gray {
+  @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+}
+
+// btn size
+
+.btn-lg,
+.btn-large {
+  @include button-size($vertical-base, $horizontal-base, $font-size-base, $line-height-base, $border-radius-large);
+}
+
+.btn-hg,
+.btn-huge {
+  @include button-size($input-padding-v-lg, $input-padding-h-lg, $font-size-base, $line-height-base, $r);
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $link-color;
+  cursor: pointer;
+  border-radius: 0;
+  text-transform: capitalize;
+  font-family: $font-family-base;
+
+  &,
+  &:active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+
+// load more items
+.btn-load-more {
+    color: $white;
+    background-color: #9FD8D2;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 12px;
+    border-radius: 0;
+}
+
+// Buttons layout
+.action-buttons {
+  margin: $v-lg 0;
+  text-align: center;
+}

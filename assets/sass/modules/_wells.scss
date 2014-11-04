@@ -1,0 +1,16 @@
+// ############# wells #############
+
+/* ============== Wells ============== */
+
+.well {
+  @include color-variant($primary-bg, $primary-color, $primary-color);
+  //margin-top: $v;
+}
+
+.well-error {
+  @include color-variant($error-bg, $error-color, $error-color);
+}
+
+.well-success {
+  @include color-variant($success-bg, $success-color, $success-color);
+}

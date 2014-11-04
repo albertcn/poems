@@ -1,0 +1,9 @@
+// ############# center-block #############
+
+// Center-align a block level element
+@mixin scale-font( $base-size ) {
+	@media (max-width: $screen-sm-min) { font-size: ceil($base-size * 0.85); }
+	@media (min-width: $screen-sm-min) { font-size: ceil($base-size * 0.9); }
+	@media (min-width: $screen-md-min) { font-size: ceil($base-size * 0.95); }
+	@media (min-width: $screen-lg-min) { font-size: ceil($base-size * 1.0); }
+}

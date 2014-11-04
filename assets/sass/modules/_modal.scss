@@ -1,0 +1,94 @@
+// ############# modal ############
+
+/* ============== modal ============== */
+
+// general modal settings
+/*
+.modal-content {
+  padding: $v-lg $h-lg;
+
+  .contract {
+    margin-bottom: $v-lg;
+  }
+}
+
+.modal-body {
+    padding: $v-lg 0;
+
+    button + button {
+      margin-left: $h;
+    }
+}
+
+.modal-dialog {
+  @media (min-width: 768px) {
+    width: 620px;
+  }
+}
+
+.modal-title {
+  font-size: $font-size-h3;
+
+  i {
+    margin-right: $h;
+  }
+}
+
+.modal-input {
+    margin: $v 0;
+
+    textarea.form-control {
+      height: 100px;
+    }
+}
+*/
+
+.modal-content {
+  overflow: hidden;
+}
+
+.modal-header-cyan {
+  color: white;
+  background-color: $btn-cyan-bg;
+}
+
+
+.modal-popout {
+  position: fixed;
+  display: none;
+  top: 56px;
+  left: $h;
+  //height: auto;
+  right: $h;
+  max-height: 0%;
+    
+ // -webkit-transition: max-height 1s;//0.5s;
+ // transition: max-height 1s;//0.5s;
+    
+  z-index: 2000;
+  //border: 1px solid $gray-border;
+  border-top: none;
+  box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.2);
+  //overflow: hidden;
+
+  &.active {
+    display: block;
+    max-height: 1000px;//100%;
+  }
+}
+
+.modal-popout-body {
+  display: block;
+  background-color: white;
+  padding: $sm;
+}
+
+.modal-popout-footer {
+  padding: $sm;
+  text-align: right;
+  display: block;
+  background-color: white;
+  border-top: 1px solid $gray-border;
+  border-radius: 0 0 $border-radius-large $border-radius-large;
+  //border-radius: $border-radius-large, $border-radius-large, $border-radius-large, $border-radius-large;
+}
